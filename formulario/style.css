@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#cadastro {
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+    flex-shrink: 0;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    min-width: 400px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 15px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    outline: none;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+/* Estilos para páginas de sucesso e erro */
+.mensagem {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 50px 60px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.sucesso {
+    border-top: 4px solid #28a745;
+}
+
+.erro {
+    border-top: 4px solid #dc3545;
+}
+
+.icone-sucesso {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.icone-erro {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #dc3545, #fd7e14);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+.mensagem h1 {
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.mensagem p {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.botao-voltar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.45);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 15px;
+    }
+    
+    img {
+        max-width: 300px;
+        order: 2;
+    }
+    
+    .form-section {
+        order: 1;
+    }
+    
+    #cadastro {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    form {
+        min-width: 350px;
+        padding: 35px 40px;
+    }
+    
+    .mensagem {
+        padding: 40px 30px;
+        max-width: 400px;
+    }
+    
+    .mensagem h1 {
+        font-size: 2rem;
+    }
+    
+    .icone-sucesso,
+    .icone-erro {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        min-width: 320px;
+        padding: 30px 35px;
+    }
+    
+    #cadastro {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    img {
+        max-width: 250px;
+    }
+    
+    .mensagem {
+        padding: 30px 25px;
+        max-width: 320px;
+    }
+    
+    .mensagem h1 {
+        font-size: 1.8rem;
+    }
+    
+    .mensagem p {
+        font-size: 1rem;
+    }
+}
